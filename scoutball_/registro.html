@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scoutball</title>
     <link rel="stylesheet" href="css/estilos.css">
-    <script src="validaciones.js"defer></script>
+    <script src="js/validaciones.js" defer></script>
 </head>
 <body>
     <header class="CabeceraFondo">
@@ -49,9 +49,9 @@
         </div>
 
         <div class="campo">
-          <label for="fecha-nacimiento">Fecha de nacimiento</label>
-          <input id="fecha-nacimiento" name="fecha-nacimiento" type="date" required />
-          <small class="error" id="err-fecha-nacimiento" aria-live="polite"></small>
+          <label for="fechaNacimiento">Fecha de nacimiento</label>
+          <input id="fechaNacimiento" name="fechaNacimiento" type="date" required />
+          <small class="error" id="err-fechaNacimiento" aria-live="polite"></small>
         </div>
 
         <div class="campo">
@@ -79,15 +79,15 @@
         </div>
 
                 <div class="campo">
-          <label for="pierna-habil">Pierna hábil</label>
-          <input id="pierna-habil" name="pierna-habil" type="text" placeholder="Ej: Derecha" autocomplete="name" required minlength="3" />
-          <small class="error" id="err-pierna-habil" aria-live="polite"></small>
+          <label for="piernaHabil">Pierna hábil</label>
+          <input id="piernaHabil" name="piernaHabil" type="text" placeholder="Ej: Derecha" autocomplete="name" required minlength="3" />
+          <small class="error" id="err-piernaHabil" aria-live="polite"></small>
         </div>
 
         <div class="campo">
-          <label for="numero-telefono">Número telefónico</label>
-          <input id="numero-telefono" name="numero-telefono" type="text" placeholder="Ej: 987654321" autocomplete="tel" required minlength="9" />
-          <small class="error" id="err-numero-telefono" aria-live="polite"></small>
+          <label for="numeroTelefonico">Número telefónico</label>
+          <input id="numeroTelefonico" name="numeroTelefonico" type="text" placeholder="Ej: 987654321" autocomplete="tel" required minlength="9" />
+          <small class="error" id="err-numeroTelefonico" aria-live="polite"></small>
         </div>
 
          <div class="campo">
@@ -97,9 +97,9 @@
         </div>
 
         <div class="campo">
-          <label for="email">Correo electrónico</label>
-          <input id="email" name="email" type="email" placeholder="Ej: ana@mail.com" autocomplete="email" required />
-          <small class="error" id="err-email" aria-live="polite"></small>
+          <label for="correoElectronico">Correo electrónico</label>
+          <input id="correoElectronico" name="correoElectronico" type="email" placeholder="Ej: ana@mail.com" autocomplete="email" required />
+          <small class="error" id="err-correoElectronico" aria-live="polite"></small>
         </div>
 
         <div class="campo">
@@ -117,12 +117,15 @@
         <div style="max-width: 800px; margin: 15px auto;">
             <label for="opinion" style="display: block; font-weight: bold; margin-bottom: 10px;">Biografía deportiva:</label>
             <textarea 
-            id="Biografía deportiva" 
+            id="biografia" 
             name="opinion" 
             rows="15" 
             class="textarea"
             style="width: 100%; min-height: 200px; padding: 15px; font-size: 16px; border: 2px solid #ccc; border-radius: 8px; box-sizing: border-box; resize: vertical;" 
-            placeholder="Cuéntanos sobre ti..."></textarea>
+            placeholder="Cuéntanos sobre ti...">
+            </textarea>
+             <small class="error" id="err-biografia" aria-live="polite"></small>
+            
         </div>
 
     

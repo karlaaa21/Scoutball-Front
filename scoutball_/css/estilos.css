@@ -152,9 +152,10 @@ form {
   margin: 0 auto;            
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); 
 }
-.campo { display: flex; flex-direction: row; gap: .500rem; margin-bottom: .100rem; }
+.campo { display: flex; flex-direction: row; gap: .500rem; margin-bottom: .100rem;  flex-wrap: wrap; }
 label {font-weight: 600; 
-        width: 35%;               
+        width: 30%; 
+        flex-shrink: 0;              
         text-align: left;}
 input[type="text"],
 input[type="email"],
@@ -163,11 +164,12 @@ input[type="date"],
 input[list] { 
     width: 65%;
     padding: .625rem .75rem; 
-  border: 1px solid var(--borde); 
-  border-radius: .375rem; 
-  background-color: #2a2d34;
-  color:#eceef470;
-  color-scheme: dark;
+    border: 1px solid var(--borde); 
+    border-radius: .375rem; 
+    background-color: #2a2d34;
+    color:#eceef470;
+    color-scheme: dark;
+
 }
 input[type="date"]::-webkit-calendar-picker-indicator {
   filter: invert(1);
@@ -178,7 +180,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
             gap: .5rem; }
 
 .error { color: #b91c1c; 
-        min-height: 1.2em; }
+        min-height: 2.4em;
+        flex-basis: 100%;
+        margin-left: 35%; }
 
 .btn { display: inline-block; 
     border: none;
