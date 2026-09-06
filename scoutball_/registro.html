@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scoutball</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <header class="CabeceraFondo">
+        <img src="imagenes/Logo.png" alt="Logo de Scoutball"
+                width="200x"
+                height="100px"
+                >
+    </header>
+
+    <nav class="Menu">
+        <a href="index.html">Inicio</a>
+        <a href="jugadores.html">Jugadores</a>
+        <a href="#">Equipos</a>
+        <a href="registro.html">¡Entra a la Cancha!</a>
+    </nav>
+
+  <main class="contenedor">
+    <section aria-labelledby="registro-titulo">
+      <h2 id="registro-titulo">Crear perfil deportivo</h2>
+
+      <form id="formRegistro" novalidate>
+        <div class="campo">
+          <label for="nombre">Nombre completo</label>
+          <input id="nombre" name="nombre" type="text" placeholder="Ej: Ana Pérez" autocomplete="name" required minlength="3" />
+          <small class="error" id="err-nombre" aria-live="polite"></small>
+        </div>
+
+    <div class="campo">
+          <label for="pais">País</label>
+          <input id="pais" name="pais" list="paises" placeholder="Escribe o elige..." autocomplete="country-name" required />
+          <datalist id="paises">
+            <option value="Chile"></option>
+            <option value="Argentina"></option>
+            <option value="Perú"></option>
+            <option value="México"></option>
+            <option value="España"></option>
+            <option value="Francia"></option>
+            <option value="Andorra"></option>
+          </datalist>
+          <small class="error" id="err-pais" aria-live="polite"></small>
+        </div>
+
+        <div class="campo">
+          <label for="fecha-nacimiento">Fecha de nacimiento</label>
+          <input id="fecha-nacimiento" name="fecha-nacimiento" type="date" required />
+          <small class="error" id="err-fecha-nacimiento" aria-live="polite"></small>
+        </div>
+
+        <div class="campo">
+          <label for="posicion">Posición</label>
+          <input id="posicion" name="posicion" type="text" placeholder="Ej: Delantero centro" autocomplete="name" required minlength="3" />
+          <small class="error" id="err-posicion" aria-live="polite"></small>
+        </div>
+
+        <div class="campo">
+          <label for="peso">Peso</label>
+          <input id="peso" name="peso" type="text" placeholder="Ej: 70 kg" autocomplete="name" required minlength="3" />
+          <small class="error" id="err-peso" aria-live="polite"></small>
+        </div>
+
+        <div class="campo">
+          <label for="altura">Altura</label>
+          <input id="altura" name="altura" type="text" placeholder="Ej: 1.70 m" autocomplete="name" required minlength="3" />
+          <small class="error" id="err-altura" aria-live="polite"></small>
+        </div>
+
+                <div class="campo">
+          <label for="sexo">Sexo</label>
+          <input id="sexo" name="sexo" type="text" placeholder="Ej: Masculino" autocomplete="name" required minlength="3" />
+          <small class="error" id="err-sexo" aria-live="polite"></small>
+        </div>
+
+                <div class="campo">
+          <label for="pierna-habil">Pierna hábil</label>
+          <input id="pierna-habil" name="pierna-habil" type="text" placeholder="Ej: Derecha" autocomplete="name" required minlength="3" />
+          <small class="error" id="err-pierna-habil" aria-live="polite"></small>
+        </div>
+
+        <div class="campo">
+          <label for="numero-telefono">Número telefónico</label>
+          <input id="numero-telefono" name="numero-telefono" type="text" placeholder="Ej: 987654321" autocomplete="tel" required minlength="9" />
+          <small class="error" id="err-numero-telefono" aria-live="polite"></small>
+        </div>
+
+         <div class="campo">
+          <label for="direccion">Dirección</label>
+          <input id="direccion" name="direccion" type="text" placeholder="Ej: Av. Principal 123" autocomplete="street-address" required />
+          <small class="error" id="err-direccion" aria-live="polite"></small>
+        </div>
+
+        <div class="campo">
+          <label for="email">Correo electrónico</label>
+          <input id="email" name="email" type="email" placeholder="Ej: ana@mail.com" autocomplete="email" required />
+          <small class="error" id="err-email" aria-live="polite"></small>
+        </div>
+
+        <div class="campo">
+          <label for="password">Contraseña</label>
+          <input id="password" name="password" type="password" placeholder="Mínimo 8 caracteres" required minlength="8" />
+          <small class="error" id="err-password" aria-live="polite"></small>
+        </div>
+
+        <div class="campo">
+          <label for="confirmar">Confirmar contraseña</label>
+          <input id="confirmar" name="confirmar" type="password" required minlength="8" />
+          <small class="error" id="err-confirmar" aria-live="polite"></small>
+        </div>
+
+        <div style="max-width: 800px; margin: 15px auto;">
+            <label for="opinion" style="display: block; font-weight: bold; margin-bottom: 10px;">Biografía deportiva:</label>
+            <textarea 
+            id="Biografía deportiva" 
+            name="opinion" 
+            rows="15" 
+            class="textarea"
+            style="width: 100%; min-height: 200px; padding: 15px; font-size: 16px; border: 2px solid #ccc; border-radius: 8px; box-sizing: border-box; resize: vertical;" 
+            placeholder="Cuéntanos sobre ti..."></textarea>
+        </div>
+
+    
+        <div class="campo check">
+          <input id="terminos" type="checkbox" required />
+          <label for="terminos">Acepto los términos y condiciones</label>
+          <small class="error" id="err-terminos" aria-live="polite"></small>
+        </div>
+
+        <button class="btn" type="submit">Registrarme</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="contenedor">
+      <p>&copy; 2025 Mi Primera Tienda</p>
+    </div>
+  </footer>
+</body>
+</html>
