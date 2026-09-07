@@ -42,7 +42,7 @@ body{
     color:aliceblue;
     padding: 10px;
     text-align: center;
-
+    font-size: 20px;
 }
 .contenedor{
     padding: 20px;
@@ -208,4 +208,69 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 main {
     flex: 1;
+}
+
+.perfil-card {
+    max-width: 800px;
+    background-color: #1a1d24;
+    border: 4px solid #C47A52;
+    margin: 40px auto;
+    padding: 30px 40px; 
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.imagen-perfil img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #C47A52;
+    flex-shrink: 0;
+}
+
+.info-perfil {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-perfil h2 {
+    margin-top: 0;
+    color: #F1F3F5;
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.info-perfil p {
+    margin: 6px 0;
+    color: white;
+    font-size: 16px;
+}
+
+.precio-mercado {
+    color: #16a34a;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px !important;
+}
+
+.btn-contactar {
+    margin-top: 15px;
+    background-color: #C47A52;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+    align-self: flex-start;
+}
+
+.btn-contactar:hover {
+    opacity: 0.95;
 }

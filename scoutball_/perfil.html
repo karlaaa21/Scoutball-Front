@@ -3,28 +3,237 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil del jugador</title>
+    <title id="titulo-pagina">Perfil - Scoutball</title>
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 
 <body>
-    <header class="Cabecera">
-        <h1>Scoutball</h1>
-        <p>Conecta jugadores con equipos y ojeadores para encontrar oportunidades reales en el fútbol</p>
+    <header class="CabeceraFondo">
+        <img src="imagenes/Logo.png" alt="Logo de Scoutball" width="200px" height="100px">
     </header>
-<div class="imagen">
-                    <img src="imagenes/CristianoRonaldo.jpg" 
-                    alt="Cristiano Ronaldo"
-                    width="200px"
-                    height="200px">
-                </div>
-                    <h3>Cristiano Ronaldo</h3>
-                    <p>Posicion: Delantero centro</p>
-                    <p>Edad: 41</p>
-                    <p>Equipo: Al Nassar</p>
-                    <p class="Precio"><strong>Valor Mercado: $10.000.000</strong></p>
-                    <button>Contactar</button>
-                    <button>Mas informacion</button>
-                
+
+    <nav class="Menu">
+        <a href="index.html">Inicio</a>
+        <a href="jugadores.html">Jugadores</a>
+        <a href="equipos.html">Equipos</a>
+        <a href="registro.html">Crear ficha</a>
+        <a href="login.html">¡Entra a la Cancha!</a>
+    </nav>
+
+    <main class="perfil-card">
+        <div class="imagen-perfil">
+            <img id="img-perfil" src="" alt="Foto de perfil">
+        </div>
+        <div class="info-perfil">
+            <h2 id="nombre-perfil">Cargando...</h2>
+            <p id="campo-1"></p>
+            <p id="campo-2"></p>
+            <p id="campo-3"></p>
+            <p id="campo-4"></p>
+            <p id="campo-5"></p>
+            <p id="campo-6"></p>
+            <p id="campo-7"></p>
+            <p id="campo-8"></p>
+            <p id="campo-9"></p>
+            <p class="precio-mercado"><strong id="precio-perfil"></strong></p>
+            <button class="btn-contactar" id="btn-accion">Contactar</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy;Scoutball 2026</p>
+    </footer>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const tipo = params.get('tipo') || 'jugador';
+        const id = params.get('id');
+
+        const baseDatosJugadores = {
+            "1": {
+                nombre: "Cristiano Ronaldo",
+                posicion: "Posición: Delantero centro",
+                edad: "Edad: 41",
+                equipo: "Equipo: Al Nassar",
+                pierna: "Pierna hábil: Ambidiestro",
+                nacimiento: "Fecha de nacimiento: 5 de febrero de 1985",
+                nacionalidad: "Nacionalidad: Portuguesa",
+                partidos: "Partidos oficiales: 1,333",
+                goles: "Goles oficiales: 978",
+                asistencias: "Asistencias oficiales: 291",
+                precio: "Valor Mercado: $10.000.000",
+                imagen: "imagenes/CristianoRonaldo.jpg"
+            },
+            "2": {
+                nombre: "Kylian Mbappé",
+                posicion: "Posición: Extremo Derecho",
+                edad: "Edad: 27",
+                equipo: "Equipo: Real Madrid",
+                pierna: "Pierna hábil: Diestro",
+                nacimiento: "Fecha de nacimiento: 20 de diciembre de 1998",
+                nacionalidad: "Nacionalidad: Francesa",
+                partidos: "Partidos oficiales: 450",
+                goles: "Goles oficiales: 320",
+                asistencias: "Asistencias oficiales: 140",
+                precio: "Valor Mercado: $200.000.000",
+                imagen: "imagenes/KylianMbappe.jpg"
+            },
+            "3": {
+                nombre: "Jude Bellingham",
+                posicion: "Posición: Mediocampista",
+                edad: "Edad: 23",
+                equipo: "Equipo: Real Madrid",
+                pierna: "Pierna hábil: Diestro",
+                nacimiento: "Fecha de nacimiento: 29 de junio de 2003",
+                nacionalidad: "Nacionalidad: Inglesa",
+                partidos: "Partidos oficiales: 220",
+                goles: "Goles oficiales: 65",
+                asistencias: "Asistencias oficiales: 50",
+                precio: "Valor Mercado: $160.000.000",
+                imagen: "imagenes/JudeBellingham.jpg"
+            },
+            "4": {
+                nombre: "Marc Cucurella",
+                posicion: "Posición: Lateral izquierdo",
+                edad: "Edad: 28",
+                equipo: "Equipo: Real Madrid",
+                pierna: "Pierna hábil: Zurdo",
+                nacimiento: "Fecha de nacimiento: 22 de julio de 1998",
+                nacionalidad: "Nacionalidad: Española",
+                partidos: "Partidos oficiales: 250",
+                goles: "Goles oficiales: 12",
+                asistencias: "Asistencias oficiales: 35",
+                precio: "Valor Mercado: $60.000.000",
+                imagen: "imagenes/CUCURELLA.jpg"
+            },
+            "5": {
+                nombre: "Andoni López",
+                posicion: "Posición: Lateral izquierdo",
+                edad: "Edad: 30",
+                equipo: "Equipo: Andorra FC",
+                pierna: "Pierna hábil: Zurdo",
+                nacimiento: "Fecha de nacimiento: 5 de abril de 1996",
+                nacionalidad: "Nacionalidad: Española",
+                partidos: "Partidos oficiales: 150",
+                goles: "Goles oficiales: 5",
+                asistencias: "Asistencias oficiales: 18",
+                precio: "Valor Mercado: $250.000",
+                imagen: "imagenes/Andoni.jpg"
+            },
+            "6": {
+                nombre: "Vinicius jr",
+                posicion: "Posición: Extremo derecho",
+                edad: "Edad: 26",
+                equipo: "Equipo: Real Madrid",
+                pierna: "Pierna hábil: Diestro",
+                nacimiento: "Fecha de nacimiento: 12 de julio de 2000",
+                nacionalidad: "Nacionalidad: brasileña",
+                partidos: "Partidos oficiales: 440",
+                goles: "Goles oficiales: 145",
+                asistencias: "Asistencias oficiales: 85",
+                precio: "Valor Mercado: $140.000.000",
+                imagen: "imagenes/Vinicius.jpg"
+            }
+        };
+
+        const baseDatosEquipos = {
+            "1": {
+                nombre: "Real Madrid",
+                estadio: "Estadio: Santiago Bernabéu",
+                fundacion: "Fundación: 6 de marzo de 1902",
+                ciudad: "Ciudad: Madrid, España",
+                presidente: "Presidente: Florentino Pérez",
+                titulos: "Títulos de Liga: 36",
+                champions: "UEFA Champions League: 15",
+                precio: "Valor Plantilla: $1.45 mil millones",
+                imagen: "imagenes/realmadrid.jpg"
+            },
+            "2": {
+                nombre: "Paris Saint Germain",
+                estadio: "Estadio: Parque de los Príncipes",
+                fundacion: "Fundación: 12 de agosto de 1970",
+                ciudad: "Ciudad: París, Francia",
+                presidente: "Presidente: Nasser Al-Khelaïfi",
+                titulos: "Títulos de Liga: 14",
+                champions: "UEFA Champions League: 2",
+                precio: "Valor Plantilla: $1.48 mil millones",
+                imagen: "imagenes/paris.jpg"
+            },
+            "3": {
+                nombre: "Colo Colo",
+                estadio: "Estadio: Monumental David Arellano",
+                fundacion: "Fundación: 19 de abril de 1925",
+                ciudad: "Ciudad: Santiago, Chile",
+                presidente: "Presidente: Aníbal Mosa",
+                titulos: "Títulos de Liga: 34",
+                champions: "Copa Libertadores: 1",
+                precio: "Valor Plantilla: $16 millones",
+                imagen: "imagenes/colocolo.jpg"
+            },
+            "4": {
+                nombre: "Andorra FC",
+                estadio: "Estadio: Nacional de Andorra",
+                fundacion: "Fundación: 15 de octubre de 1942",
+                ciudad: "Ciudad: Andorra la Vieja, Andorra",
+                presidente: "Presidente: Gerard Piqué",
+                titulos: "Títulos de Liga: 0",
+                champions: "Competencia internacional: N/A",
+                precio: "Valor Plantilla: $15.05 millones",
+                imagen: "imagenes/Andorra.jpg"
+            },
+            "5": {
+                nombre: "Ronin Fc",
+                estadio: "Estadio: Camp Municipal de Futbol",
+                fundacion: "Fundación: 2020",
+                ciudad: "Ciudad: Cataluña, España",
+                presidente: "Presidente: Directiva Ronin",
+                titulos: "Títulos de Liga: 0",
+                champions: "Competencia internacional: N/A",
+                precio: "Valor Plantilla: $100 mil",
+                imagen: "imagenes/ronin.jpg"
+            }
+        };
+
+        const baseDatosActiva = tipo === 'equipo' ? baseDatosEquipos : baseDatosJugadores;
+        const entidad = baseDatosActiva[id];
+
+        if (entidad) {
+            document.getElementById('img-perfil').src = entidad.imagen;
+            document.getElementById('img-perfil').alt = entidad.nombre;
+            document.getElementById('nombre-perfil').textContent = entidad.nombre;
+
+            if (tipo === 'equipo') {
+                document.getElementById('titulo-pagina').textContent = "Perfil del equipo - Scoutball";
+                document.getElementById('campo-1').textContent = entidad.estadio;
+                document.getElementById('campo-2').textContent = entidad.fundacion;
+                document.getElementById('campo-3').textContent = entidad.ciudad;
+                document.getElementById('campo-4').textContent = entidad.presidente;
+                document.getElementById('campo-5').textContent = entidad.titulos;
+                document.getElementById('campo-6').textContent = entidad.champions;
+                document.getElementById('campo-7').style.display = 'none';
+                document.getElementById('campo-8').style.display = 'none';
+                document.getElementById('campo-9').style.display = 'none';
+                document.getElementById('precio-perfil').textContent = entidad.precio;
+                document.getElementById('btn-accion').textContent = "Contactar Club";
+            } else {
+                document.getElementById('titulo-pagina').textContent = "Perfil del jugador - Scoutball";
+                document.getElementById('campo-1').textContent = entidad.posicion;
+                document.getElementById('campo-2').textContent = entidad.edad;
+                document.getElementById('campo-3').textContent = entidad.equipo;
+                document.getElementById('campo-4').textContent = entidad.pierna;
+                document.getElementById('campo-5').textContent = entidad.nacimiento;
+                document.getElementById('campo-6').textContent = entidad.nacionalidad;
+                document.getElementById('campo-7').textContent = entidad.partidos;
+                document.getElementById('campo-8').textContent = entidad.goles;
+                document.getElementById('campo-9').style.display = 'block';
+                document.getElementById('campo-9').textContent = entidad.asistencias;
+                document.getElementById('precio-perfil').textContent = entidad.precio;
+                document.getElementById('btn-accion').textContent = "Contactar Jugador";
+            }
+        } else {
+            document.getElementById('nombre-perfil').textContent = "Perfil no encontrado";
+            document.getElementById('precio-perfil').textContent = "";
+        }
+    </script>
 </body>
 </html>
