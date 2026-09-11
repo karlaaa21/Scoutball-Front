@@ -5,27 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scoutball</title>
     <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/validaciones.js" defer></script>
 </head>
 <body>
     <header class="CabeceraFondo">
-        <img src="imagenes/Logo.png" alt="Logo de Scoutball"
-                width="200x"
-                height="100px"
-                >
+        <a href="index.html">
+        <img src="imagenes/Logo.png" alt="Logo de Scoutball" width="200" height="100">
+        </a>
     </header>
 
     <nav class="Menu">
         <a href="index.html">Inicio</a>
         <a href="jugadores.html">Jugadores</a>
-        <a href="equipos.html">Equipos</a>
+        <a class="activo" href="equipos.html">Equipos</a>
         <a href="registro.html">Crear ficha</a>
+        <a href="registroequipo.html">¡Arma tu once!</a>
         <a href="login.html">¡Entra a la Cancha!</a>
     </nav>
 
     
 
 <main class="Contenedorequipo">
-        <h2>Equipos</h2>
+        <h2 class="letrastit">Equipos</h2>
         <p>Elige tu próximo club y demuestra todo tu talento en la cancha</p>
     </main>
 
@@ -40,8 +41,9 @@
                 <p>Pais: España</p>
                 <p class="Precio"><strong>Valor Mercado: $1.45 mil millones</strong></p>
                 <button onclick="window.location.href='perfil.html?tipo=equipo&id=1'">
-                    Ver perfil
+                    Más información
                 </button>
+                <button type="button" data-postular data-nombre="Real Madrid" data-correo="reclutamiento@realmadrid-demo.cl" data-telefono="+34 91 555 0101">Postular al equipo</button>
             </article>
 
             <article class="equipo">
@@ -54,8 +56,9 @@
                 <p>Pais: Francia</p>
                 <p class="Precio"><strong>Valor Mercado: $1.48 mil millones</strong></p>
                 <button onclick="window.location.href='perfil.html?tipo=equipo&id=2'">
-                    Ver perfil
+                    Más información
                 </button>
+                <button type="button" data-postular data-nombre="Paris Saint-Germain" data-correo="reclutamiento@psg-demo.fr" data-telefono="+33 1 555 0102">Postular al equipo</button>
             </article>
 
             <article class="equipo">
@@ -68,8 +71,9 @@
                 <p>Pais: Chile</p>
                 <p class="Precio"><strong>Valor Mercado: $16 millones</strong></p>
                 <button onclick="window.location.href='perfil.html?tipo=equipo&id=3'">
-                    Ver perfil
+                    Más información
                 </button>
+                <button type="button" data-postular data-nombre="Colo-Colo" data-correo="reclutamiento@colocolo-demo.cl" data-telefono="+56 2 2555 0103">Postular al equipo</button>
             </article>
 
             <article class="equipo">
@@ -82,8 +86,9 @@
                 <p>Pais: Andorra</p>
                 <p class="Precio"><strong>Valor Mercado: $15.05 millones</strong></p>
                 <button onclick="window.location.href='perfil.html?tipo=equipo&id=4'">
-                    Ver perfil
+                    Más información
                 </button>
+                <button type="button" data-postular data-nombre="Andorra FC" data-correo="reclutamiento@andorra-demo.ad" data-telefono="+376 555 0104">Postular al equipo</button>
             </article>
 
             <article class="equipo">
@@ -96,8 +101,9 @@
                 <p>Pais: España </p>
                 <p class="Precio"><strong>Valor Mercado: $100 mil</strong></p>
                 <button onclick="window.location.href='perfil.html?tipo=equipo&id=5'">
-                    Ver perfil
+                    Más información
                 </button>
+                <button type="button" data-postular data-nombre="Ronin FC" data-correo="reclutamiento@ronin-demo.es" data-telefono="+34 91 555 0105">Postular al equipo</button>
             </article>
         </section>
     </main>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scoutball</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/validaciones.js" defer></script>
+</head>
+<body>
+     <header class="CabeceraFondo">
+        <a href="index.html">
+        <img src="imagenes/Logo.png" alt="Logo de Scoutball" width="200" height="100">
+        </a>
+    </header>
+
+    <nav class="Menu">
+        <a href="index.html">Inicio</a>
+        <a href="jugadores.html">Jugadores</a>
+        <a href="equipos.html">Equipos</a>
+        <a href="registro.html">Crear ficha</a>
+        <a class="activo" href="registroequipo.html">¡Arma tu once!</a>
+        <a href="login.html">¡Entra a la Cancha!</a>
+    </nav>
+     <main class="contenedor">
+    <section aria-labelledby="registro-titulo">
+        <h2 class="letrastit" id="registro-titulo">Crear la ficha de tu equipo</h2>
+        <p>Crea la ficha de tu equipo y comienza a encontrar jugadores para tu próximo desafío.</p>
+
+    <form id="formEquipo" novalidate>
+        <div class="campo">
+            <label for="nombreEquipo">Nombre del equipo</label>
+            <input
+                id="nombreEquipo"
+                type="text"
+                placeholder="Ej: Deportivo Estrella"
+            >
+            <small class="error" id="err-nombre-equipo"></small>
+        </div>
+
+        <div class="campo">
+            <label for="ubicacionEquipo">Ubicación</label>
+            <input
+                id="ubicacionEquipo"
+                type="text"
+                placeholder="Ej: Santiago"
+            >
+            <small class="error" id="err-ubicacion-equipo"></small>
+        </div>
+
+        <div class="campo">
+            <label for="paisEquipo">País</label>
+            <input
+                id="paisEquipo"
+                type="text"
+                placeholder="Ej: Chile"
+            >
+            <small class="error" id="err-pais-equipo"></small>
+        </div>
+
+        <div class="campo">
+            <label for="ligaEquipo">Liga</label>
+            <input
+                id="ligaEquipo"
+                type="text"
+                placeholder="Ej: Liga de Primera"
+            >
+            <small class="error" id="err-liga-equipo"></small>
+        </div>
+
+        <div class="campo">
+            <label for="tecnicoEquipo">Director técnico</label>
+            <input
+                id="tecnicoEquipo"
+                type="text"
+                placeholder="Nombre del técnico"
+            >
+            <small class="error" id="err-tecnico-equipo"></small>
+        </div>
+
+        <div class="campo">
+            <label for="titulosEquipo">Títulos</label>
+            <input
+                id="titulosEquipo"
+                type="number"
+                min="0"
+                placeholder="Ej: 3"
+            >
+            <small class="error" id="err-titulos-equipo"></small>
+        </div>
+
+        <div class="campo">
+            <label for="correoEquipo">Correo de contacto</label>
+            <input
+                id="correoEquipo"
+                type="email"
+                placeholder="Ej: contacto@equipo.cl"
+            >
+            <small class="error" id="err-correo-equipo"></small>
+        </div>
+
+        <div class="campo">
+            <label for="telefonoEquipo">Número telefónico</label>
+            <input
+                id="telefonoEquipo"
+                type="tel"
+                placeholder="Ej: +56 9 1234 5678"
+            >
+            <small class="error" id="err-telefono-equipo"></small>
+        </div>
+
+        <button class="btn" type="submit">
+            Crear equipo
+        </button>
+
+        <p id="mensaje-equipo" class="mensaje-formulario"></p>
+    </form>
+</section>
+  </main>
+
+  <footer>
+    <div class="contenedor">
+      <p>&copy; Scoutball 2026 </p>
+    </div>
+  </footer>
+</body>
+</html>

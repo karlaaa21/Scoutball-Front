@@ -6,33 +6,40 @@
     <title>Scoutball</title>
     <link rel="stylesheet" href="css/estilos.css">
     <script src="js/validaciones.js" defer></script>
+    
 </head>
 <body>
-    <header class="CabeceraFondo">
-        <img src="imagenes/Logo.png" alt="Logo de Scoutball"
-                width="200x"
-                height="100px"
-                >
+     <header class="CabeceraFondo">
+        <a href="index.html">
+        <img src="imagenes/Logo.png" alt="Logo de Scoutball" width="200" height="100">
+        </a>
     </header>
     <nav class="Menu"></nav>
 
-    <nav class="Menu">
-        <a href="index.html">Inicio</a>
+    <nav class="Menu"aria-abel="Navegacion principal">
+        <a class="activo" href="index.html">Inicio</a>
         <a href="jugadores.html">Jugadores</a>
         <a href="equipos.html">Equipos</a>
-        <a href="registro.html">Crear ficha</a>
+        <a class ="menu-destacado" href="registro.html">Crear ficha</a>
+        <a class ="menu-destacado" href="registroequipo.html">¡Arma tu once!</a>
         <a href="login.html">¡Entra a la Cancha!</a>
     </nav>
-    <header class="slogan">
-         <h1>
-        Bienvenido a Scoutball
-        </h1> 
-        <p> El talento que buscas, el equipo que necesitas.</p>
-    </header>
-
-      <main class="contenedor">
-         <h2 id="productos-titulo">Jugadores destacados</h2>
-  <section class="Jugadores">
+    <main>
+        <section class="slogan">
+                <p class="etiqueta">PLATAFORMA DE SCOUTING</p>
+                <h1>El talento que buscas,<br>el equipo que necesita.</h1>
+                <p class="descripcion">Descubre perfiles, conecta con jugadores y encuentra tu próxima gran oportunidad en el fútbol.</p>
+                <a class="boton-principal" href="jugadores.html">Explorar jugadores <span aria-hidden="true">→</span></a>
+        </section>
+        <section class="contenedor" aria-labelledby="productos-titulo">
+            <div class="titulo-seccion">
+                <div>
+                    <p class="etiqueta">SELECCIÓN SCOUTBALL</p>
+                    <h2 id="productos-titulo">Jugadores destacados</h2>
+                </div>
+                <a class="enlace-ver-todos" href="jugadores.html">Ver todos <span aria-hidden="true">→</span></a>
+            </div>
+        <section class="Jugadores">
             <article class="jugador">
                 <div class="imagen">
                     <img src="imagenes/CristianoRonaldo.jpg" 
@@ -45,7 +52,7 @@
                     <p>Edad: 41</p>
                     <p>Equipo: Al Nassar</p>
                     <p class="Precio"><strong>Valor Mercado: $10.000.000</strong></p>
-
+                    <button type="button" data-contactar data-nombre="Cristiano Ronaldo" data-representante="Jorge Mendes" data-correo="representante@cr7demo.cl" data-telefono="+56 9 5555 0101">Contactar</button>
                     <button onclick="window.location.href='perfil.html?id=1'">
                         Ver perfil
                     </button>
@@ -62,12 +69,64 @@
                     <p>Edad: 23</p>
                     <p>Equipo: Real Madrid</p>
                     <p class="Precio"><strong>Valor Mercado: $140.000.000</strong></p>
+                    <button type="button" data-contactar data-nombre="Vinícius Júnior" data-representante="Equipo Vini Jr." data-correo="representante@viniciusdemo.cl" data-telefono="+56 9 5555 0102">Contactar</button>
                     <button onclick="window.location.href='perfil.html?id=6'">
                         Ver perfil
                     </button>
             </article>
 
-    </section>
+            </section>
+        </section>
+
+        <section class="contenedor seccion-equipos" aria-labelledby="equipos-titulo">
+            <div class="titulo-seccion">
+                <div>
+                    <p class="etiqueta">CLUBES DISPONIBLES</p>
+                    <h2 id="equipos-titulo">Explora equipos</h2>
+                </div>
+                <a class="enlace-ver-todos" href="equipos.html">Ver todos <span aria-hidden="true">→</span></a>
+            </div>
+            <section class="Equipos equipos-inicio">
+                <article class="equipo equipo-inicio">
+                    <div class="imagen">
+                        <img src="imagenes/realmadrid.jpg" alt="Escudo del Real Madrid">
+                    </div> 
+                    <h3>Real Madrid</h3>
+                    <p>Liga: La Liga (Española)</p>
+                    <p>Pais: España</p>
+                    <p class="Precio"><strong>Valor Mercado: $1.45 mil millones</strong></p>
+                    <button onclick="window.location.href='perfil.html?tipo=equipo&id=1'">
+                    Más información
+                    </button>
+                    <button type="button" data-postular data-nombre="Real Madrid" data-correo="reclutamiento@realmadrid-demo.cl" data-telefono="+34 91 555 0101">Postular al equipo</button>
+                </article>
+                <article class="equipo equipo-inicio">
+                    <div class="imagen">
+                        <img src="imagenes/paris.jpg" alt="Escudo del Paris Saint-Germain">
+                    </div>
+                    <h3>Paris Saint-Germain</h3>
+                    <p>Liga: Ligue one (Francesa)</p>
+                    <p>Pais: Francia</p>
+                    <button onclick="window.location.href='perfil.html?tipo=equipo&id=3'">
+                    Más información
+                    </button>
+                    <button type="button" data-postular data-nombre="Paris Saint-Germain" data-correo="reclutamiento@psg-demo.fr" data-telefono="+33 1 555 0102">Postular al equipo</button>
+                </article>
+                <article class="equipo equipo-inicio">
+                    <div class="imagen">
+                        <img src="imagenes/colocolo.jpg" alt="Escudo de Colo-Colo">
+                    </div>
+                    <h3>Colo-Colo</h3>
+                    <p>Liga: Liga De Primera(Chilena)</p>
+                    <p>Pais: Chile</p>
+                    <p class="Precio"><strong>Valor Mercado: $16 millones</strong></p>
+                    <button onclick="window.location.href='perfil.html?tipo=equipo&id=3'">
+                    Más información
+                    </button>
+                    <button type="button" data-postular data-nombre="Colo-Colo" data-correo="reclutamiento@colocolo-demo.cl" data-telefono="+56 2 2555 0103">Postular al equipo</button>
+                </article>
+            </section>
+        </section>
     </main>
     <footer>
         <p>&copy; Scoutball 2026</p>

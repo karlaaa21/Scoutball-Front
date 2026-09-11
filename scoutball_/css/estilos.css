@@ -1,219 +1,262 @@
-body{
-    background: linear-gradient(
-        135deg,
-        #0B0F14 0%,
-        #151B22 50%,
-        #0B0F14 100%
-    );
-    color: #F1F3F5;
+/* ==========================================
+   VARIABLES Y CONFIGURACIÓN GLOBAL
+   ========================================== */
+:root {
+    --fondo: #071520;
+    --superficie: #102532;
+    --superficie-clara: #173542;
+    --texto: #f4f8f7;
+    --texto-suave: #aebfc4;
+    --acento: #c9f25c;
+    --borde: rgba(213, 237, 228, 0.16);
+}
 
+* { 
+    box-sizing: border-box; 
+}
+
+body {
+    background: var(--fondo);
+    color: var(--texto);
     font-family: Arial, Helvetica, sans-serif;
-    margin: 10;
-    display: flex;
-
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-.CabeceraFondo {
-    height: 150px;
-
-    background-image: url('../imagenes/Fondo.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
-}
-
-.CabeceraFondo img {
-    width: 250px;
-    height: auto;
-
-    position: absolute;
-    top: 20px;
-    left: 20px;
-}
-
-.imagen{
-    font-size: 60px;
-}
-.Menu{
-    background-color: #e0996dda;
-    color:aliceblue;
-    padding: 10px;
-    text-align: center;
-    font-size: 20px;
-}
-.contenedor{
-    padding: 20px;
-    text-align: center;
-
-}
-
-.jugador{
-  
-    border: 1px solid black;
-    padding: 20px;
-    margin-bottom: 20px;
-    width: 220px;
-    text-align: justify;
-}
-
-.Contenedorequipo{
-    font-size: 20px;
-    text-align: center;
-    margin-top: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    letter-spacing: 2px;
-    color:#C47A52;
-    -webkit-text-stroke: 0.5px rgba(255, 255, 255, 0.258);
-}
-
-.Contenedorju{
-    font-size: 20px;
-    text-align: center;
-    margin-top: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    letter-spacing: 2px;
-    color:#C47A52;
-    -webkit-text-stroke: 0.5px rgba(255, 255, 255, 0.258);
-
-}
-
-.equipo{
-    border: 1px solid black;
-    padding: 20px;
-    margin-bottom: 20px;
-    width: 220px;
-    text-align: justify;
-    
-}
-.TituloPaginaEquipo {
-    font-size: 20px;
-    text-align: center;
-    margin-top: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    letter-spacing: 2px;
-    color:#C47A52;
-    -webkit-text-stroke: 0.5px rgba(255, 255, 255, 0.258);
-}
-
-.Precio{
-    font-size: 15px;
-    font-weight: bold;
-    text-align: center;
-}
-
-
-
-button{
-    background-color: grey;
-    color:whitesmoke;
-    border: 1;
-    padding: 5px 25px;
-    font-size: 15px;
-    text-align: center;
-}
-
-footer{
-   font-family: Arial, Helvetica, sans-serif;
-   padding: 10px; 
-   font-size: 15px;
-   color:whitesmoke;
-   border-top: 2px solid #C47A52;
-}
-.Jugadores{
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.Equipos{
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.slogan{
-    font-size: 20px;
-    text-align: center;
-    margin-top: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    letter-spacing: 2px;
-    color:#C47A52;
-    -webkit-text-stroke: 0.5px rgba(255, 255, 255, 0.258);
-}
-
-form {
-  background-color: #1a1d24; 
-  border: 1px solid #2d3139;  
-  border-radius: .75rem;     
-  padding: 2rem;             
-  max-width: 950px;        
-  width: 100%;       
-  margin: 0 auto;            
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); 
-}
-.campo { display: flex; flex-direction: row; gap: .500rem; margin-bottom: .100rem;  flex-wrap: wrap; }
-label {font-weight: 600; 
-        width: 30%; 
-        flex-shrink: 0;              
-        text-align: left;}
-input[type="text"],
-input[type="email"],
-input[type="password"],
-input[type="date"],
-input[list] { 
-    width: 65%;
-    padding: .625rem .75rem; 
-    border: 1px solid var(--borde); 
-    border-radius: .375rem; 
-    background-color: #2a2d34;
-    color:#eceef470;
-    color-scheme: dark;
-
-}
-input[type="date"]::-webkit-calendar-picker-indicator {
-  filter: invert(1);
-  cursor: pointer;
-}
-.campo.check { flex-direction: row; 
-            align-items: center;
-            gap: .5rem; }
-
-.error { color: #b91c1c; 
-        min-height: 2.4em;
-        flex-basis: 100%;
-        margin-left: 35%; }
-
-.btn { display: inline-block; 
-    border: none;
-    background:#C47A52; 
-    color: white; 
-    padding: .625rem 2rem; 
-    border-radius: .385rem; 
-    cursor: pointer;
-    margin-top: 1.5rem; }
-
-.btn:hover { opacity: .95; }
-
-.textarea{
-  background-color: #2a2d34;
-  color:gray;
-  width: 100%;
-  height: 100px;
+    line-height: 1.5;
+    margin: 0;
 }
 
 main {
     flex: 1;
 }
 
+/* ==========================================
+   CABECERA Y NAVEGACIÓN
+   ========================================== */
+.CabeceraFondo {
+    background-image: linear-gradient(rgba(3, 16, 25, 0.52), rgba(3, 16, 25, 0.72)), url('../imagenes/Fondo.png');
+    background-position: center;
+    background-size: cover;
+    display: grid;
+    min-height: 190px;
+    padding: 24px;
+    place-items: center;
+}
+
+.CabeceraFondo img {
+    filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.45));
+    height: auto;
+    width: min(270px, 75vw);
+}
+
+.Menu {
+    align-items: center;
+    background-color: #0c202b;
+    border-bottom: 1px solid var(--borde);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    padding: 12px 20px;
+}
+
+.Menu a {
+    color: white;
+    font-size: 0.92rem;
+    font-weight: bold;
+    padding: 9px 14px;
+    text-decoration: none;
+    transition: color 0.2s, background-color 0.2s;
+}
+
+.Menu a:hover, .Menu a.activo { 
+    color: var(--acento); 
+}
+
+.Menu .menu-destacado { 
+    background: var(--acento); 
+    border-radius: 999px; 
+    color: #10220d; 
+}
+
+.Menu .menu-destacado:hover { 
+    background: #d8ff73; 
+    color: #10220d; 
+}
+
+/* ==========================================
+   PÁGINA DE INICIO (INDEX)
+   ========================================== */
+.slogan {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 2px;
+    color: #C47A52;
+    -webkit-text-stroke: 0.5px rgba(255, 255, 255, 0.258);
+    background: radial-gradient(circle at 50% 0%, #1a3a45 0%, var(--fondo) 64%);
+    margin: 0;
+    padding: 76px 24px 82px;
+}
+
+.slogan h1 {
+    color: var(--texto);
+    font-size: clamp(2.2rem, 5vw, 4.35rem);
+    letter-spacing: -0.055em;
+    line-height: 1.04;
+    margin: 0;
+}
+
+.descripcion { 
+    color: var(--texto-suave); 
+    font-size: 1.05rem; 
+    margin: 22px auto 30px; 
+    max-width: 570px; 
+}
+
+.equipos-inicio .equipo {
+    width: 345px;
+}
+
+.equipos-inicio .equipo .imagen {
+    height: 200px;
+}
+
+.equipos-inicio .equipo .imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* ==========================================
+   SECCIÓN DE JUGADORES
+   ========================================== */
+.Contenedorju {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 2px;
+    color: white;
+    background: radial-gradient(circle at 50% 0%, #1a3a45 7%, var(--fondo) 84%);
+    -webkit-text-stroke: 0.5px rgba(255, 255, 255, 0.258);
+    margin: 30px auto; 
+    max-width: 900px; 
+    padding: 0 24px; 
+}
+
+.Jugadores { 
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 20px; 
+    justify-content: center; 
+}
+
+.jugador {
+    background: var(--superficie);
+    border: 1px solid var(--borde);
+    border-radius: 14px;
+    overflow: hidden;
+    padding: 0;
+    text-align: center;
+    transition: transform 0.2s, border-color 0.2s;
+    width: min(100%, 510px);
+}
+
+.jugador .imagen { 
+    height: 200px; 
+    overflow: hidden; 
+}
+
+.jugador .imagen img { 
+    background: #0b1d27; 
+    display: block; 
+    height: 100%; 
+    object-fit: contain; 
+    padding: 10px; 
+    width: 100%; 
+}
+
+.contenido-jugador { 
+    padding: 22px; 
+}
+
+/* ==========================================
+   SECCIÓN DE EQUIPOS
+   ========================================== */
+.Contenedorequipo {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 2px;
+    background: radial-gradient(circle at 50% 0%, #1a3a45 7%, var(--fondo) 104%);
+    color: var(--texto);
+    -webkit-text-stroke: 0.5px rgba(255, 255, 255, 0.258);
+    margin: 30px auto; 
+    max-width: 900px; 
+    padding: 0 24px; 
+}
+
+.TituloPaginaEquipo {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 2px;
+    color: #C47A52;
+    -webkit-text-stroke: 0.5px rgba(255, 255, 255, 0.258);
+    margin: 30px auto; 
+    max-width: 900px; 
+    padding: 0 24px; 
+}
+
+.Equipos { 
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 20px; 
+    justify-content: center; 
+}
+
+.equipo {
+    background: var(--superficie);
+    border: 1px solid var(--borde);
+    border-radius: 14px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.2s, border-color 0.2s;
+    width: 250px; 
+}
+
+.equipo > img {
+    display: block;
+    height: 200px;
+    width: 100%;
+    object-fit: contain; 
+    background: white; 
+    border-radius: 8px; 
+    margin-bottom: 15px;
+}
+
+.equipo .imagen { 
+    height: 200px; 
+    overflow: hidden; 
+}
+
+.equipo .imagen img { 
+    background: #0b1d27; 
+    display: block; 
+    height: 100%; 
+    object-fit: contain; 
+    padding: 10px; 
+    width: 100%; 
+}
+
+/* ==========================================
+   PÁGINA DE PERFIL
+   ========================================== */
 .perfil-card {
     max-width: 800px;
-    background-color: #1a1d24;
-    border: 4px solid #C47A52;
+    background-color: var(--superficie-clara);
+    border: 4px solid var(--acento);
     margin: 40px auto;
     padding: 30px 40px; 
     border-radius: 12px;
@@ -229,7 +272,7 @@ main {
     height: 200px;
     object-fit: cover;
     border-radius: 50%;
-    border: 4px solid #C47A52;
+    border: 4px solid var(--fondo);
     flex-shrink: 0;
 }
 
@@ -245,10 +288,19 @@ main {
     margin-bottom: 10px;
 }
 
-.info-perfil p {
-    margin: 6px 0;
+.datos-perfil {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.dato-perfil {
+    background-color: #0b1d27;
+    border: 1px solid #294754;
+    border-radius: 7px;
     color: white;
-    font-size: 16px;
+    margin: 0;
+    padding: 12px;
 }
 
 .precio-mercado {
@@ -258,9 +310,215 @@ main {
     margin-top: 10px !important;
 }
 
+.etiqueta-dato {
+    color: var(--texto-suave);
+    display: block;
+    font-size: 0.8rem;
+    margin-bottom: 6px;
+}
+
+.valor-dato {
+    color: var(--texto);
+    font-size: 1rem;
+}
+
+.volver-jugadores {
+    color: var(--acento);
+    display: inline-block;
+    font-weight: bold;
+    margin-top: 55px; 
+    margin-left: 530px;
+    margin-bottom: 20px;
+    text-decoration: none;
+}
+
+.volver-jugadores:hover { 
+    text-decoration: underline; 
+}
+
+/* ==========================================
+   FORMULARIOS Y MODALES
+   ========================================== */
+form {
+    background-color: var(--superficie-clara); 
+    border: 1px solid var(--superficie);  
+    border-radius: .75rem;     
+    padding: 2rem;             
+    max-width: 950px;         
+    width: 100%;       
+    margin: 0 auto;            
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); 
+}
+
+.campo { 
+    display: flex; 
+    flex-direction: row; 
+    gap: .500rem; 
+    margin-bottom: .100rem;  
+    flex-wrap: wrap; 
+}
+
+label {
+    font-weight: 600; 
+    width: 30%; 
+    flex-shrink: 0;                         
+    text-align: left;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+input[list] { 
+    width: 65%;
+    padding: .625rem .75rem; 
+    border: 1px solid var(--borde); 
+    border-radius: .375rem; 
+    background-color: #2a2d34;
+    color: #eceef470;
+    color-scheme: dark;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    cursor: pointer;
+}
+
+.campo.check { 
+    flex-direction: row; 
+    align-items: center;
+    gap: .5rem; 
+}
+
+.textarea {
+    background-color: #2a2d34;
+    color: gray;
+    width: 100%;
+    height: 100px;
+}
+
+.modal {
+    align-items: center;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    inset: 0;
+    justify-content: center;
+    padding: 20px;
+    position: fixed;
+    z-index: 100;
+}
+
+.modal-contenido {
+    background: #102532;
+    border: 1px solid #c9f25c;
+    border-radius: 12px;
+    color: white;
+    max-height: 90vh;
+    max-width: 600px;
+    overflow-y: auto;
+    padding: 25px;
+    position: relative;
+    width: 100%;
+}
+
+.cerrar-modal {
+    background: transparent;
+    border: 0;
+    color: white;
+    cursor: pointer;
+    font-size: 28px;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+}
+
+.datos-contacto {
+    background: #071520;
+    border-left: 3px solid #c9f25c;
+    margin: 15px 0;
+    padding: 12px;
+}
+
+.campo-modal {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 12px;
+}
+
+.campo-modal input,
+.campo-modal textarea {
+    background: #071520;
+    border: 1px solid #294754;
+    border-radius: 5px;
+    color: white;
+    padding: 10px;
+}
+
+.campo-modal textarea {
+    min-height: 100px;
+}
+
+.error { 
+    color: #ff9d9d; 
+    min-height: 2.4em;
+    flex-basis: 100%;
+    margin-left: 35%;
+    margin-top: 5px; 
+}
+
+/* ==========================================
+   BOTONES, TEXTOS Y OTROS COMPONENTES
+   ========================================== */
+button {
+    background-color: grey;
+    color: whitesmoke;
+    border: 1;
+    padding: 5px 25px;
+    font-size: 15px;
+    text-align: center;
+}
+
+.boton-principal { 
+    background: var(--acento); 
+    color: #10220d; 
+}
+
+.boton-principal:hover, button:hover { 
+    background: #d8ff73; 
+    transform: translateY(-2px); 
+}
+
+.boton-principal, .boton-secundario, button {
+    border: 0;
+    border-radius: 7px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 0.92rem;
+    font-weight: bold;
+    padding: 12px 18px;
+    text-align: center;
+    text-decoration: none;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn { 
+    display: inline-block; 
+    border: none;
+    background: var(--acento); 
+    color: white; 
+    padding: .625rem 2rem; 
+    border-radius: .385rem; 
+    cursor: pointer;
+    margin-top: 1.5rem; 
+}
+
+.btn:hover { 
+    opacity: .95; 
+}
+
 .btn-contactar {
     margin-top: 15px;
-    background-color: #C47A52;
+    background-color: var(--acento);
     color: white;
     border: none;
     padding: 10px 20px;
@@ -273,4 +531,61 @@ main {
 
 .btn-contactar:hover {
     opacity: 0.95;
+}
+
+.equipo button + button,
+.jugador button + button {
+    margin-top: 10px;
+}
+
+.Precio {
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.etiqueta {
+    color: var(--acento);
+    font-size: 0.74rem;
+    font-weight: bold;
+    letter-spacing: 0.16em;
+    margin: 0 0 12px;
+}
+
+.letrastit {
+    color: var(--acento);
+}
+
+.enlace-ver-todos { 
+    color: var(--acento); 
+    font-weight: bold; 
+    text-decoration: none; 
+    white-space: nowrap; 
+}
+
+.enlace-ver-todos:hover { 
+    text-decoration: underline; 
+}
+
+.imagen {
+    font-size: 60px;
+}
+
+.contenedor {
+    padding: 20px;
+    text-align: center;
+    background: radial-gradient(circle at 50% 0%, #1a3a45 7%, var(--fondo) 84%);
+    
+}
+
+.h2.jugadores {
+    color: var(--acento);
+}
+
+footer {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px; 
+    font-size: 15px;
+    color: whitesmoke;
+    border-top: 2px solid var(--acento);
 }
